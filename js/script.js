@@ -74,7 +74,7 @@ $(document).ready(function() {
 				console.log("Weather API response: ", weatherData);
 				//Fetching all the infor from the JSON file and plugging it into UI 
 				$(".currentTemp").html(weatherData.current_weather.temperature);
-				//$(".weatherCondition").html(new Date(weatherData.current_weather.time * 1000));
+				$(".weatherCondition").html(new Date(weatherData.current_weather.time * 1000));
 				$(".feelsLike").html(weatherData.current_weather.temperature + " °C");
 				$(".humidity").html((weatherData.current_weather.weathercode * 100).toFixed(0));
 				$(".windSpeed").html((weatherData.current_weather.windspeed/0.6213).toFixed(2));
