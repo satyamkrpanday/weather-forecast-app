@@ -52,9 +52,13 @@ $(document).ready(function() {
 	//After collecting the Latiture and Longitute, Getting their formatted address from Google Maps.
 	function yourAddress(ipData) {
 		console.log("IP data for yourAddress: ", ipData);
+		if(ipData !== undefined){
+
+		
 		var formattedAddress = "City: " + ipData.city + ", Region: " + ipData.regionName + ", Country: " + ipData.country;
 		$(".locName").html(formattedAddress);
 	}
+}
 
 	function getWeather() {
 		//Looking up the weather from Darkskies using users latitude and longitude.
